@@ -1,0 +1,8 @@
+.particle-canvas {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  overflow: hidden;
+  cursor: none; /* 마우스 커서 숨김 (선택사항) */
+}

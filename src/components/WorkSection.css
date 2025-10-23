@@ -1,0 +1,177 @@
+/* === 전체 섹션 === */
+.work-section {
+  width: 100%;
+  height: 100vh;
+  background: radial-gradient(circle at center, #020b16, #000); /* 딥 블루 그라데이션 */
+  color: white;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  perspective: 1600px;
+  position: relative;
+}
+
+/* === 타이틀 === */
+.work-title {
+  text-align: center;
+  font-size: clamp(1.8rem, 3vw, 3.2rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 1.2;
+  margin-bottom: 4rem;
+  letter-spacing: 1px;
+}
+
+.work-title span,
+.work-title strong {
+  color: #3b9fff; /* 메인 블루 포인트 */
+}
+
+/* === 슬라이더 === */
+.work-slider {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 480px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+  overflow: visible;
+}
+
+/* === 카드 === */
+.work-card {
+  width: 300px;
+  height: 440px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+  overflow: hidden;
+  background: linear-gradient(180deg, #0a1a2f 0%, #112d54 100%); /* 블루 그라데이션 */
+  box-shadow: 0 20px 50px rgba(0, 90, 190, 0.4); /* 블루 그림자 */
+  transform-origin: center center;
+  transition: transform 0.5s ease, box-shadow 0.4s ease, filter 0.4s ease;
+}
+
+.work-card:hover {
+  transform: translate(-50%, -50%) scale(1.05);
+  box-shadow: 0 25px 80px rgba(0, 128, 255, 0.6); /* 밝은 블루 빛 */
+  filter: brightness(1.05);
+}
+
+/* === 내부 구조 === */
+.work-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+/* === 이미지 === */
+.work-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.6s ease, filter 0.6s ease;
+}
+
+.work-card:hover .work-image {
+  transform: scale(1.07);
+  filter: brightness(0.9);
+}
+
+/* === 하단 블루 블록 === */
+.work-info {
+  position: relative;
+  z-index: 2;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 128, 255, 0.95),
+    rgba(0, 64, 180, 0.98)
+  ); /* 블루 그라데이션 */
+  padding: 1.5rem 1.4rem;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 38%;
+  backdrop-filter: blur(6px);
+}
+
+.work-info h3 {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.work-info p {
+  margin-top: 0.4rem;
+  line-height: 1.4;
+  font-size: 0.9rem;
+  opacity: 0.95;
+}
+
+/* === 버튼 === */
+.work-btn {
+  margin-top: 1rem;
+  align-self: flex-start;
+  background: #fff;
+  color: #007bff; /* 블루 */
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.work-btn:hover {
+  background: #007bff;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+/* === 네비게이션 화살표 === */
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #cce5ff; /* 은은한 블루 화살표 */
+  font-size: 3rem;
+  padding: 0;
+  cursor: pointer;
+  z-index: 100;
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.nav-btn:hover {
+  color: #3b9fff; /* 밝은 블루 포인트 */
+  transform: translateY(-50%) scale(1.2);
+}
+
+.nav-btn.left {
+  left: 100px;
+}
+
+.nav-btn.right {
+  right: 100px;
+}
